@@ -1,0 +1,277 @@
+
+.menu{   
+    font-weight: bold;
+    justify-content: flex-end;
+    display: flex; 
+    gap: 0.5rem;
+ }
+ .menu a{
+     display: block;
+ }
+ .menu li{
+     font-size: 25px;
+     margin: 0 50px 0 0;
+    
+ }
+ .cabecalho{
+     padding: 30px 90px 30px;
+     font-size: 50px;
+     font-weight: bold;
+     display: flex;
+     background-image: url(../imagens/neonc.png);
+     border-bottom: solid white;
+ }
+ .cabecalho h1{   
+     font-size: 60px;
+ }
+.dev{   
+    padding: 10px 90px 10px;  
+    font-size: 20px;
+    margin-bottom: 40px; 
+    background: rgb(12,41,173);
+    background: linear-gradient(90deg, rgba(12,41,173,1) 4%, rgba(12,41,173,1) 30%, rgba(2,10,47,1) 70%, rgba(3,12,55,1) 98%); 
+}
+
+
+.nav {
+    padding: 50px 0 0 0;
+    max-width: 1900px;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 52px;
+}
+
+.nav-list {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+}
+.nav-list a {
+    font-size: 20px;
+    color: #fff; 
+}
+.hero {
+    height: calc(100vh - 70px);
+    background: center / cover no-repeat url("./bg.jpg");
+}
+
+.hamburger {
+    display: none;
+    border: none;
+    background: none;
+    border-top: 3px solid #fff;
+    cursor: pointer;
+}
+
+.hamburger::after,
+.hamburger::before {
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    margin-top: 5px;
+    position: relative;
+    transition: 0.3s;
+}
+
+@media (max-width: 750px) {
+.hamburger {
+    margin: 40px 30px 40px 40px;
+    display: block;
+    z-index: 3;
+}
+.nav-list {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: auto;
+    background: rgb(24, 36, 87);
+    clip-path: circle(20px at 80% -15%);
+    transition: 1s ease-out;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: none;
+    padding-bottom: 30px;
+    pointer-events: none;  
+    z-index: 2;
+
+}
+
+.nav-list a {
+    font-size: 15px;
+    opacity: 0;
+    margin: 10px 0 10px 0;
+    padding: 5px 0 10px 0;
+    gap: 10px;
+   
+ 
+}
+.nav-list li:nth-child(1) a {
+    transition: 0.5s 0.2s;
+}
+.nav-list li:nth-child(2) a {
+    transition: 0.5s 0.4s;
+}
+.nav-list li:nth-child(3) a {
+    transition: 0.5s 0.6s;
+}
+/* Estilos ativos */
+.nav.active .nav-list {
+    clip-path: circle(1500px at 90% -15%);
+    pointer-events: all;
+}
+
+.nav.active .nav-list a {
+    opacity: 1;
+}
+
+.nav.active .hamburger {
+    position: fixed;
+    top: 26px;
+    right: 16px;
+    border-top-color: transparent;
+}
+
+.nav.active .hamburger::before {
+    transform: rotate(135deg);
+}
+.nav.active .hamburger::after {
+    transform: rotate(-135deg);
+    top: -7px;
+}
+.cabecalho{ 
+    height: 150px;
+    max-width: auto;
+}
+.nav{
+    margin:-10px -60px -10px;
+    padding-right: 30px;
+    width: fit-content;
+}
+.logo{
+    font-size: 30px;
+    padding-right: 30px;
+}
+.dev{
+    font-size: 13px; 
+    padding: 10px 100px 10px 30px;   
+}
+.dev h3{
+     font-size: 100px;     
+}
+.foto1{
+    position: relative;
+    height: 40%;
+    width: 70%;
+    margin: 20px 50px 40px 0;
+
+}
+
+.btn{
+    padding: 30px;
+    margin: 40px 20px 20px 40px;
+    align-content: center;
+    text-align: center;
+    justify-content: center; 
+    display: flex; 
+}
+.fotoSobre{
+    width: 100%;
+    margin: 20px 0px 30px 50px;
+}
+
+.sobre{
+    padding: 20px;
+    text-align: center;
+    max-width: 100%;
+    max-height: 70%;
+    margin-bottom: 150px;
+}
+.m_sobre{
+    margin: 10px;
+}
+.sobre h2{
+    font-size: 60px;
+}
+.sobre h3{
+    font-size: 25px;
+}
+.sobre p{
+    font-size: 16px;
+    margin: 10px;
+    text-align: justify;
+    align-items: center;
+    padding: 30px 10px 90px 0;
+    max-width: 100%;
+}
+.m_skill{
+    margin: auto;
+    margin: 10px;
+}
+.skills {
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.skills td p{
+    width: 100px;
+    margin: 10px 0  0 -5px;
+}
+.skills td span{
+    width: 100px;
+    margin: 10px 0  0 -5px;
+}
+.m_contato{
+    margin: auto;  
+}
+.m_contato h2{
+    margin-top: 45px;
+    padding: 10px;
+    width: auto;
+    display: inline-block;
+    font-size: 25px;
+    border-bottom: none;
+}
+#icons{
+    border-radius: 40px;
+    margin: 80px 20px 0 20px;
+    border: white 1px solid;
+}
+.m_project{ 
+    margin: 30px 10px 0 10px;
+    height: 70%;
+}
+.project_img{
+    height: fit-content;
+}
+.project_img img{
+   max-height: 70%;
+   max-width: 90%;
+   height: auto;
+}
+.swiper{
+    height: 800px;
+}
+.swiper-wrapper{
+    height: 50%;
+    width: 50%;
+}
+.swiper-slide{
+    height: 900px;
+}
+.footer{
+    margin-bottom: -90px;
+}
+
+}
